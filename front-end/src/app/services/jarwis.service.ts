@@ -24,4 +24,9 @@ export class JarwisService {
   sendPasswordRequestLink(data) {
     return this.http.post(`${this.baseUrl}/sendPasswordRequestLink`, data);
   }
+
+  // password reset response to backend link
+  changePassword(data) {
+    return this.http.post(`${this.baseUrl}/resetPassword`, data);
+  }
 }

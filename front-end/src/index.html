@@ -4,12 +4,19 @@
   <base href="./">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="CoreUI - Free Angular Admin Template">
-  <meta name="author" content="Łukasz Holeczek">
-  <meta name="keyword" content="Bootstrap,Admin,Template,Free,Angular,Dashboard,Typescript">
-	<link rel="shortcut icon" href="assets/favicon.ico">
-	<title>CoreUI - Free Angular Admin Template</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	<link rel="shortcut icon" href="assets/dist/img/AdminLTELogo.png">
+	<title> Admin Template</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
   <script>
@@ -22,8 +29,28 @@
     gtag('config', 'UA-118965717-4');
   </script>
 </head>
-<body class="app">
+<body class="hold-transition sidebar-mini ">
+  <div class="wrapper">
   <!-- App Loading... -->
-  <app-root></app-root>
+    <app-root></app-root>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/toastr/toastr.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="assets/dist/js/adminlte.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="assets/plugins/chart.js/Chart.min.js"></script>
+    <script src="assets/dist/js/demo.js"></script>
+    <script src="assets/dist/js/pages/dashboard3.js"></script>
 </body>
 </html>

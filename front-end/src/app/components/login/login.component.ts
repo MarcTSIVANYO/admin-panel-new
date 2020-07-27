@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { JarwisService } from '../../services/jarwis.service';
 import { TokenService } from '../../services/token.service';
 import { Router } from '@angular/router';
+import { NotificationService } from '../../services/notification.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +24,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private jarwisService: JarwisService,
     private tokenService: TokenService,
-    private router: Router){}
+    private router: Router,
+    private notifyService : NotificationService,
+    private authService: AuthService){}
 
    // function that post data login to db via laravel
    onSubmit() {
@@ -34,11 +38,13 @@ export class LoginComponent implements OnInit {
 
   handleResponse(data) {
     this.tokenService.handle(data.access_token);
-    this.router.navigateByUrl('/dashboard'); // redirect to profile if user signin
+    this.authService.changeAuthStatus(true); // return true is user logged in
+    this.router.navigateByUrl('/home'); // redirect to profile if user signin
   }
 
    // Error function to handle unauthorized user display
    handleError(error) {
     this.error = error.error.error;
+    this.notifyService.showError(this.error, "Erreur")
   }
 }

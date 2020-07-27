@@ -16,6 +16,7 @@ export class TokenService {
   // token handle methode saved in localstorage()
   handle(token) {
     this.set(token);
+    console.log(token);
   }
 
   // set item in the localStorage

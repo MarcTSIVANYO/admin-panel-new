@@ -8,6 +8,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'admin-app';
-  
+
   constructor(public router: Router) {}
 }
